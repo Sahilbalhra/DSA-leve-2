@@ -47,7 +47,8 @@ class CoinChange{
         return count;
     }
     //combination single 
-    public static int coinChangeCombSingle(int [] coins, int tar,int idx, String asf){
+   
+    public static int coinChangeCombSingle(int [] coins, int tar, int idx, String asf){
         if(tar == 0){
             System.out.println(asf);
             return 1;
@@ -55,7 +56,7 @@ class CoinChange{
         int count = 0;
         for(int i = idx; i<coins.length; i++){
             if(tar - coins[i] >= 0){
-                count += coinChangeCombInf(coins, tar-coins[i],i, asf + coins[i]);
+                count += coinChangeCombSingle(coins, tar-coins[i],i+1, asf + coins[i]);
             }
         }
         return count;
