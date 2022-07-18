@@ -11,7 +11,7 @@
 
 // Input: n = 12
 // Output: 21
-public class LC556 {
+public class Lc556 {
     public void swap(char [] arr,int i,int j){
         char temp=arr[i];
         arr[i]=arr[j];
