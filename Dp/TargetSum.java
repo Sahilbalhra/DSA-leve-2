@@ -51,7 +51,8 @@ public class TargetSum {
             }
         }
         System.out.println(dp[n][t]);
-        
+        scn.close();
+    }
         
     
 }
