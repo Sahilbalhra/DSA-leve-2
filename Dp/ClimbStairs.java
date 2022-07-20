@@ -2,8 +2,6 @@
 // 2. You are on the 0th step and are required to climb to the top.
 // 3. In one move, you are allowed to climb 1, 2 or 3 stairs.
 // 4. You are required to print the number of different paths via which you can climb to the top.
-
-import java.io.*;
 import java.util.*;
 
 public class ClimbStairs {
@@ -14,6 +12,7 @@ public class ClimbStairs {
     int n = scn.nextInt();
     // System.out.println(climb(n).size());
     System.out.println(climb(n,new int[n+1]));
+    scn.close();
     
   }
 //   public static ArrayList<String> climb(int n) {
@@ -52,6 +51,7 @@ public static int climb(int n,int []qb){
       int num3=climb(n-3,qb);
       qb[n]=num1+num2+num3;
       return num1+num2+num3;
+    
     
 }
 

@@ -32,6 +32,6 @@ public class ClimbStairsWithVariableJumps{
         
         System.out.println(dp[0]);
         
-        
+        scn.close();
       }
 }

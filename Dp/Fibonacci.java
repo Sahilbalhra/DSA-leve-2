@@ -12,7 +12,6 @@
 
 
 
-import java.io.*;
 import java.util.*;
 
 public class Fibonacci{
@@ -23,6 +22,7 @@ public static void main(String[] args) throws Exception {
     int n=scn.nextInt();
     int ans=fibDp(n,new int[n+1]);
     System.out.println(ans);
+    scn.close();
     
  }
  public static int fib(int n){
