@@ -8,7 +8,7 @@
 // Note -> Each item can be taken 0 or 1 number of times. You are not allowed to put the same item 
 //                again and again.
 import java.util.*;
-public class O1Knapsack {
+public class Knapsack01 {
     public static Scanner scn = new Scanner(System.in);
 
   public static void input(int [] arr) {
