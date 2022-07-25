@@ -14,6 +14,7 @@
 // Input: mat = [[3,3,1,1],[2,2,1,2],[1,1,1,2]]
 // Output: [[1,1,1,1],[1,2,2,2],[1,2,3,3]]
 
+import java.util.*;
 public class LC1329 {
     public int[][] diagonalSort(int[][] mat) {
         int n=mat.length;
