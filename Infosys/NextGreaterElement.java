@@ -16,66 +16,66 @@
 // permutation. So, the next permutation 
 // is the lowest one.
 
-public class NextGreaterElement {
-    class Solution{
+import java.util.*;
 
-    
-        static void swap(int [] arr,int i,int j){
-            int temp=arr[i];
-            arr[i]=arr[j];
-            arr[j]=temp;
+public class NextGreaterElement {
+    class Solution {
+
+        static void swap(int[] arr, int i, int j) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
         }
-        
-        static List<Integer> nextPermutation(int n, int arr[]){
-            //finding the 1st smaller number
-               ArrayList<Integer> list=new ArrayList<>();
-            
-            int i=n-1;
-            while(i>0){
-                if(arr[i-1]>=arr[i]){
+
+        static List<Integer> nextPermutation(int n, int arr[]) {
+            // finding the 1st smaller number
+            ArrayList<Integer> list = new ArrayList<>();
+
+            int i = n - 1;
+            while (i > 0) {
+                if (arr[i - 1] >= arr[i]) {
                     i--;
-                }else{
+                } else {
                     break;
                 }
             }
             // System.out.println(i);
-            //already final form
-            
-            if(i==0){
-                  for(int k=n-1;k>=0;k--){
+            // already final form
+
+            if (i == 0) {
+                for (int k = n - 1; k >= 0; k--) {
+                    list.add(arr[k]);
+                }
+                return list;
+            }
+
+            // finding the 1st greater idx
+
+            int j = n - 1;
+            while (j > i - 1) {
+                if (arr[j] > arr[i - 1]) {
+                    break;
+                }
+                j--;
+            }
+            swap(arr, j, i - 1);
+            // System.out.println(j);
+
+            int left = i;
+            int right = n - 1;
+
+            while (right >= left) {
+                swap(arr, left, right);
+                left++;
+                right--;
+            }
+
+            for (int k = 0; k < n; k++) {
                 list.add(arr[k]);
             }
-                 return list;
-            }
-            
-            //finding the 1st greater idx
-          
-          int j=n-1;
-          while(j>i-1){
-              if(arr[j]>arr[i-1]){
-                 break;
-              }
-              j--;
-          }
-          swap(arr,j,i-1);
-        //   System.out.println(j);
-          
-          int left =i;
-          int right=n-1;
-          
-          while(right>=left){
-              swap(arr,left,right);
-              left++;
-              right--;
-          }
-          
-              for(int k=0;k<n;k++){
-                list.add(arr[k]);
-            }
-           return list;
-            
-           
+            return list;
+
         }
     }
-    
+
 }

@@ -1,4 +1,4 @@
-import java.io.*;
+
 import java.util.*;
 public class FractionalKnapsack {
 
@@ -52,6 +52,7 @@ public class FractionalKnapsack {
         double r=(vals[i]*1.0)/wts[i];
         
         Item item=new Item(vals[i],wts[i],r);
+        System.out.println(item);
     }
     
     Arrays.sort(items);

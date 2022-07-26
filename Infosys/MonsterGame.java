@@ -1,8 +1,5 @@
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.util.*;
+
 
 // While playing an RPG game, you were assigned to complete one of the hardest quests in this game. There are n monsters you’ll need to defeat in this quest. Each monster i is described with two integer numbers – poweri and bonusi. To defeat this monster, you’ll need at least poweri experience points. If you try fighting this monster without having enough experience points, you lose immediately. You will also gain bonusi experience points if you defeat this monster. You can defeat monsters in any order.
 
@@ -52,6 +49,7 @@ public class MonsterGame {
 
         class Monster{
             public int power,bonus;
+            //constructor
             public Monster(int power,int bonus){
                 this.power=power;
                 this.bonus=bonus;

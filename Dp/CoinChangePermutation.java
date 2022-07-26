@@ -43,5 +43,6 @@ public class CoinChangePermutation {
         
         
        System.out.println(dp[tar]);
+       scn.close();
     }
 }
