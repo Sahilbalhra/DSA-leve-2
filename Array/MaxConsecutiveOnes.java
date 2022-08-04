@@ -17,6 +17,8 @@
 // Bolded numbers were flipped from 0 to 1. The longest subarray is underlined.
 
 
+//Two pointer approach
+
 public class MaxConsecutiveOnes {
     public int longestOnes(int[] nums, int k) {
         int i=0;
@@ -25,11 +27,12 @@ public class MaxConsecutiveOnes {
         int ans=0;
         
       while(i<nums.length){
-          
+          //counting number of zeros
           if(nums[i]==0){
               cz++;
           }
           
+          //making the zeros equal to the k
           while(cz>k){
               if(nums[j]==0){
                   cz--;
@@ -37,8 +40,9 @@ public class MaxConsecutiveOnes {
               j++;
           }
           
+          //length between i and j
           int len=i-j+1;
-          
+          //max b/w prev answer and the new length
           ans=Math.max(ans,len);
           i++;
       }
