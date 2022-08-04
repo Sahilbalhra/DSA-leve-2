@@ -25,6 +25,7 @@ public class MaxNumberFromString {
         char d=scn.next().charAt(0);
 
        System.out.println(removeDigit(num,d));
+       scn.close();
 
     }
     
